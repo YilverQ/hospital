@@ -1,0 +1,39 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Método que se ejecuta al iniciar la migración. 
+     * Creamos una tabla llamada: 'admins'.
+     * Agregamos los atributos correspondientes a la tabla.
+     */
+    public function up()
+    {
+        /**
+         * id: Número de identificación único del registo. (Es autoincrementable)
+         * username: campo que nos indica el nombre de usuario (admin).
+         * password: campo que nos indica la clave de usuario (admin). 
+         * timestamps: Marca de tiempo para cuando se crea un registro y para cuando se actualiza.
+         * 
+        **/
+        Schema::create('admins', function (Blueprint $table) {
+            $table->id();
+            $table->string('username')->unique();
+            $table->string('password');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Método que se ejecuta al hacer un rollback en la migración de laravel. 
+     * Elimina la tabla 'admins'.
+     */
+    public function down()
+    {
+        Schema::dropIfExists('admins');
+    }
+};

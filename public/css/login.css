@@ -1,0 +1,98 @@
+.content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+}
+
+.form{
+	margin-top: 20px;
+}
+
+.formLogin{
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	padding: 20px;
+	border-radius: var(--border-radius);
+	max-width: 600px;
+	background: var(--light-color);
+	border: 2px solid var(--dark-color);
+}
+
+.iconUser{
+	font-size: 30px;
+}
+
+.formLogin__title{
+	text-align: center;
+	font-size: 30px;
+}
+
+.formLogin__description{
+	font-size: 14px;
+	color: #05060f99;
+}
+
+.input{
+  width: 200px;
+  height: 40px;
+  background-color: #05060f0a;
+  border-radius: var(--border-radius);
+  padding: 0 8px;
+  border: 2px solid transparent;
+  font-size: 16px;
+  transition: border-color .3s cubic-bezier(.25,.01,.25,1) 0s, 
+  			color .3s cubic-bezier(.25,.01,.25,1) 0s,
+  			background .2s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.label{
+  display: block;
+  margin-bottom: .3rem;
+  font-size: .9rem;
+  color: #05060f99;
+  transition: color .3s cubic-bezier(.25,.01,.25,1) 0s;
+}
+
+.input:hover, .input:focus, .input-group:hover .input{
+  outline: none;
+  border-color: var(--main-color);
+}
+
+.input-group:hover .label, .input:focus{
+  color: var(--main-color);
+}	
+
+.input--button {
+	width: 220px;
+	margin: 20px 0;
+	background-color: #05060f0a;
+	color: #05060f99;
+}
+
+.input--button:hover {
+ 	background: var(--main-color);
+ 	color: var(--light-color);
+}
+
+
+.disabled{
+	display: none;
+}
+.message{
+	position: fixed;
+	padding: 10px;
+	color: var(--light-color);
+}
+.message--error{
+	background: var(--second-color);
+}
+.message--error{
+	background: var(--success-color);
+}
+.botonIcon{
+	cursor: pointer;
+}
